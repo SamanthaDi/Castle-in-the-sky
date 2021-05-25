@@ -1,2 +1,2 @@
-Equipo: Kodama Productions
-Proyecto: Castle In The Sky
+# EQUIPO: Kodama Productions
+>> PROYECTO: Castle In The Sky
