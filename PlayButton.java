@@ -1,27 +1,27 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
- * Write a description of class intructions here.
+ * Write a description of class Play here.
  * 
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class HowToPlay extends Buttons
+public class PlayButton extends Button
 {
-    public HowToPlay() 
+    
+    public PlayButton(Observer ... observers) 
     {
-        GreenfootImage playButton = new GreenfootImage(300, 80);
+        super(observers);
+        GreenfootImage playButton = new GreenfootImage(120, 80);
         Font adjustedFont = new Font("Castellar",true, false, 35);
         playButton.setColor(Color.WHITE);
         playButton.setFont(adjustedFont);
-        playButton.drawString("How to play", 0, 50);
+        playButton.drawString("Play", 0, 50);
         setImage(playButton);
     }    
     
-    public void act()
+    protected void onClickedButton()
     {
-        checkMouse();
-        checkClick(new MyWorld());
+        Greenfoot.setWorld(new FirstLevelWorld());
     }
 }
-
