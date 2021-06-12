@@ -8,11 +8,14 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Ship1 extends InvasiveShip
 {
-    private int size = 110;
+    private int size = 4;
+    
+    private GreenfootImage ship = new GreenfootImage("images/InvasiveShip7.png");
     
     public Ship1()
     {
-        getImage().scale (getImage().getWidth()-size, getImage().getHeight()-size);
+        setImage(ship);
+        getImage().scale (getImage().getWidth()/size, getImage().getHeight()/size);
     }
       
 }

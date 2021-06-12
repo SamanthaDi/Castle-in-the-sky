@@ -12,6 +12,14 @@ public class castleLv1 extends Actor
      * Act - do whatever the castilloLv1 wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
+    private GreenfootImage ship = new GreenfootImage("images/castle1.png");
+    
+    public castleLv1()
+    {
+        setImage(ship);
+    }
+    
     public void act() 
     {
         // Add your action code here.
