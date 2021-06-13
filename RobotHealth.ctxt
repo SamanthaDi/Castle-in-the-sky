@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=RobotHealth
+comment1.params=width\ height\ robot
+comment1.target=RobotHealth(int,\ int,\ RobotSoldier)
+comment2.params=
+comment2.target=void\ act()
+comment3.params=
+comment3.target=void\ drawBar()
+numComments=4
