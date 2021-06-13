@@ -12,8 +12,8 @@ public class PlayButton extends Button
     public PlayButton(Observer ... observers) 
     {
         super(observers);
-        GreenfootImage playButton = new GreenfootImage(120, 80);
-        Font adjustedFont = new Font("Castellar",true, false, 35);
+        GreenfootImage playButton = new GreenfootImage(190, 80);
+        Font adjustedFont = new Font("Castellar",true, false, 60);
         playButton.setColor(Color.WHITE);
         playButton.setFont(adjustedFont);
         playButton.drawString("Play", 0, 50);
@@ -22,6 +22,6 @@ public class PlayButton extends Button
     
     protected void onClickedButton()
     {
-        Greenfoot.setWorld(new FirstLevelWorld());
+        Greenfoot.setWorld(new FirstLevelWorld(60));
     }
 }
