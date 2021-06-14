@@ -28,7 +28,11 @@ public class Explosion extends RobotSoldier
     public void attackShip(){
         InvasiveShip ship = (InvasiveShip)getOneIntersectingObject(InvasiveShip.class);
         if(isTouching(InvasiveShip.class)){
+            World myWorld = getWorld();
             getWorld().removeObject(ship);
+            Level level = (Level)myWorld;
+            ScoreBoard score = level.getScore();
+            score.addScore(300);
         }
     }
     

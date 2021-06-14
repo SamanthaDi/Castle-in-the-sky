@@ -2,7 +2,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class RobotSoldier extends Actor
 {
-    
     static int grado = 0;
     private static final int OFFSET = 5;
     private double gas = 1000;
@@ -20,6 +19,7 @@ public class RobotSoldier extends Actor
         movement();
         sufferDamage();
         refuelRobot();
+        
     }
     
     public void movement(){

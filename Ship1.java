@@ -11,11 +11,4 @@ public class Ship1 extends InvasiveShip
         getImage().scale (getImage().getWidth()/size, getImage().getHeight()/size);
         this.speed = speed;
     }
-      
-    /*public void act()
-    {
-        Castle castle = (Castle) getWorld().getObjects(Castle.class).get(0);  
-        turnTowards(castle.getX(), castle.getY());
-        move(speed);
-    }*/
 }
