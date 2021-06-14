@@ -1,21 +1,15 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class intructions here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class HowToPlayButton extends Button
 {
     public HowToPlayButton(Observer ... observers) 
     {
         super(observers);
         GreenfootImage playButton = new GreenfootImage(300, 80);
-        Font adjustedFont = new Font("Castellar",true, false, 35);
+        Font adjustedFont = new Font("Castellar",true, false, 60);
         playButton.setColor(Color.WHITE);
         playButton.setFont(adjustedFont);
-        playButton.drawString("How to play", 0, 50);
+        playButton.drawString("rules", 0, 50);
         setImage(playButton);
     }    
     

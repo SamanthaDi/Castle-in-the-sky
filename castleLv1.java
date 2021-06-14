@@ -1,27 +1,17 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
-/**
- * Write a description of class castilloLv1 here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
-public class castleLv1 extends Actor
+public class CastleLv1 extends Castle
 {
-    /**
-     * Act - do whatever the castilloLv1 wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+   
+    private GreenfootImage castle = new GreenfootImage("images/castle1.png");
     
-    private GreenfootImage ship = new GreenfootImage("images/castle1.png");
-    
-    public castleLv1()
+    public CastleLv1()
     {
-        setImage(ship);
+        this.health = 1000;
+        setImage(castle);
+        getImage().scale (getImage().getWidth()-60, getImage().getHeight()-60);
     }
     
-    public void act() 
-    {
-        // Add your action code here.
-    }    
+     
+    
 }
