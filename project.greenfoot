@@ -7,6 +7,7 @@ class.RobotSoldier.image=robot.png
 class.Ship1.image=InvasiveShip1.png
 class.Ship2.image=InvasiveShip2.png
 class.Ship3.image=InvasiveShip3.png
+
 dependency1.from=ScoreWorld
 dependency1.to=BackButton
 dependency1.type=UsesDependency
@@ -125,6 +126,7 @@ editor.fx.0.y=0
 height=830
 package.numDependencies=37
 package.numTargets=29
+
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -138,7 +140,8 @@ readme.name=@README
 readme.width=47
 readme.x=10
 readme.y=10
-simulation.speed=51
+
+simulation.speed=48
 target1.height=50
 target1.name=CastleHealth
 target1.showInterface=false
@@ -232,12 +235,14 @@ target20.x=0
 target20.y=0
 target21.height=50
 target21.name=TryAgainButton
+
 target21.showInterface=false
 target21.type=ClassTarget
 target21.width=110
 target21.x=0
 target21.y=0
 target22.height=50
+
 target22.name=GameOverWorld
 target22.showInterface=false
 target22.type=ClassTarget
@@ -246,12 +251,14 @@ target22.x=0
 target22.y=0
 target23.height=50
 target23.name=BackButton
+
 target23.showInterface=false
 target23.type=ClassTarget
 target23.width=80
 target23.x=0
 target23.y=0
 target24.height=50
+
 target24.name=FirstLevelWorld
 target24.showInterface=false
 target24.type=ClassTarget
@@ -293,6 +300,7 @@ target29.type=ClassTarget
 target29.width=80
 target29.x=0
 target29.y=0
+
 target3.height=50
 target3.name=HealthBar
 target3.showInterface=false

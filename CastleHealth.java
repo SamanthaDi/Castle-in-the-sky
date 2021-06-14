@@ -3,7 +3,6 @@ import greenfoot.*;
 public class CastleHealth extends HealthBar
 {
     private Castle castle;
-
     public CastleHealth(int width, int height, Castle castle)
     {
         this.width = width;
@@ -23,7 +22,7 @@ public class CastleHealth extends HealthBar
 
         int healthWidth = (int)(castle.gethealthPercent()*width);
         bar.fillRect(0, 0, healthWidth, height);
-
+        
         setImage(bar);
     }
 }

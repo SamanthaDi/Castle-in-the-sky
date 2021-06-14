@@ -9,5 +9,6 @@ public class ScoreWorld extends World
         super(933, 700, 1); 
         setBackground(score);
         addObject(new BackButton(), 870, 50);
+
     }
 }

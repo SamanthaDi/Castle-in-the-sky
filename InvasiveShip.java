@@ -4,7 +4,7 @@ public class InvasiveShip extends Actor
 {
     private int Width, Height;
     protected int speed;
-
+    
     public void act() 
     {
         move();
@@ -23,6 +23,7 @@ public class InvasiveShip extends Actor
             getWorld().removeObject(this);
         }
     }
+
 
     public void setSpeed(int value)
     {

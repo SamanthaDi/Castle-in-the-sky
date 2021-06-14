@@ -1,9 +1,9 @@
 import greenfoot.*;  
 
+
 public class RobotHealth extends HealthBar
 {
     private RobotSoldier robot;
-
     public RobotHealth(int width, int height, RobotSoldier robot)
     {
         this.width = width;

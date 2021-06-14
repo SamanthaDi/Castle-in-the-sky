@@ -16,6 +16,7 @@ public class Counter extends Actor
     public Counter(String prefix)
     {
         background = getImage(); 
+
         value = 0;
         target = 0;
         this.prefix = prefix;

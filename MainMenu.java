@@ -8,6 +8,7 @@ public class MainMenu extends World implements Observer
     public MainMenu()
     {    
         super(933, 700, 1);
+
         setBackground(menu);
         addObject(new PlayButton(this), 120, 260);
         addObject(new HowToPlayButton(), 170, 340);

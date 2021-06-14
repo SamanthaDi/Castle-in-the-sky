@@ -9,5 +9,6 @@ public class HowToPlayWorld extends World
         super(933, 700, 1); 
         setBackground(rules);
         addObject(new BackButton(), 870, 50);
+
     }
 }

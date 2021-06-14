@@ -8,10 +8,9 @@ public class CastleLv1 extends Castle
     public CastleLv1()
     {
         this.health = 1000;
+
         setImage(castle);
         getImage().scale (getImage().getWidth()-60, getImage().getHeight()-60);
     }
-    
-     
     
 }

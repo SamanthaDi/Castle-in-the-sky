@@ -11,5 +11,4 @@ public class Ship1 extends InvasiveShip
         getImage().scale (getImage().getWidth()/size, getImage().getHeight()/size);
         this.speed = speed;
     }
-    
 }

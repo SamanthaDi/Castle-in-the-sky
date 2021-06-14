@@ -1,3 +1,4 @@
+
 import greenfoot.*;  
 
 public class Castle extends Actor
@@ -19,6 +20,7 @@ public class Castle extends Actor
         if(isTouching(InvasiveShip.class)){
             health -= 50;
             getWorld().removeObject(ship);
+
         }
     }
     
