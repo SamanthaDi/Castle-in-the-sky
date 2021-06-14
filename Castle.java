@@ -1,8 +1,10 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+
+import greenfoot.*;  
 
 public class Castle extends Actor
 {
-    private double health = 1000;
+    protected double health;
+    
     public void act() 
     {
         sufferDamage();
@@ -14,8 +16,11 @@ public class Castle extends Actor
     }
     
     public void sufferDamage(){
+        InvasiveShip ship = (InvasiveShip)getOneIntersectingObject(InvasiveShip.class);
         if(isTouching(InvasiveShip.class)){
-            health -= 10;
+            health -= 50;
+            getWorld().removeObject(ship);
+
         }
     }
     

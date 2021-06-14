@@ -1,8 +1,11 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class FirstLevelWorld extends World implements Level
 {
     private GreenfootImage sky1 = new GreenfootImage("images/sky1.png");
+
+    static GreenfootSound soundtrack = new GreenfootSound("invasion.mp3");
+
     private SimpleTimer time = new SimpleTimer();
     private Counter timeCount = new Counter();
     private int timeLimit;
@@ -31,12 +34,17 @@ public class FirstLevelWorld extends World implements Level
 
     public void act()
     {
+        if(soundtrack.isPlaying()== false){
+            soundtrack.play();
+            soundtrack.setVolume(25);
+        }  
+
         if(time.millisElapsed() > 1000)
         {
             timeCount.add(-1);
             time.mark();
         }
-        
+
         createCrystal();
         
         if(timeCount.getValue()%3 == 0)
@@ -76,6 +84,10 @@ public class FirstLevelWorld extends World implements Level
     {
         Crystal crystal = new Crystal();
         if(Greenfoot.getRandomNumber(300) == 7)
-        addObject(crystal,Greenfoot.getRandomNumber(getWidth()), 0);
+        {
+            addObject(crystal,Greenfoot.getRandomNumber(getWidth()), 0);
+        }
+        
+
     }
 }

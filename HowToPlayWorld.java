@@ -1,15 +1,14 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class HowToPlayWorld extends World
 {
-
-    /**
-     * Constructor for objects of class HowToPlayWorld.
-     * 
-     */
+    private GreenfootImage rules = new GreenfootImage("images/instrucciones.jpg");
+    
     public HowToPlayWorld()
     {    
-        // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1); 
+        super(933, 700, 1); 
+        setBackground(rules);
+        addObject(new BackButton(), 870, 50);
+
     }
 }
