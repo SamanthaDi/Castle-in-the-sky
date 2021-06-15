@@ -1,34 +1,47 @@
 import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import java.io.*;
 
-/**
- * Write a description of class main_menu here.
- * 
- * @author (your name) 
- * @version (a version number or a date)
- */
 public class MainMenu extends World implements Observer
 {
-    private GreenfootSound soundtrack = new GreenfootSound("Main_menu.mp3");
+    static GreenfootSound soundtrack;
     private GreenfootImage menu = new GreenfootImage("images/mainMenu.jpg");
-    
+    //private static SoundController sInstance;
+
     public MainMenu()
     {    
-        super(933, 700, 1); 
+        super(933, 700, 1);
+        selectSong("Main_menu.mp3");
+        
         setBackground(menu);
         addObject(new PlayButton(this), 120, 260);
-        addObject(new HowToPlayButton(), 170, 340);
-        addObject(new ScoresButton(), 180, 430);
+        addObject(new HowToPlayButton(this), 170, 340);
+        addObject(new ScoresButton(this), 180, 430);
         addObject(new ExitButton(this), 700, 650);
     }
-    
+
     public void eventOcurred()
     {
         soundtrack.stop();
     }
-    
-    public void started()
+
+    public void act()
     {
-        soundtrack.play();
+        playSong();
+    }
+    
+    public void selectSong(String songName){
+        try {
+            soundtrack = new GreenfootSound(songName);
+        } catch (Exception ex) {
+            // Ignore
+        }
+    }
+    
+    public void playSong(){
+        if(soundtrack.isPlaying()== false){
+            soundtrack.play();
+            soundtrack.setVolume(55);
+        }
     }
 
 }

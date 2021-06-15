@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class Counter extends Actor
 {
@@ -15,7 +15,8 @@ public class Counter extends Actor
 
     public Counter(String prefix)
     {
-        background = getImage();  // get image from class
+        background = getImage(); 
+
         value = 0;
         target = 0;
         this.prefix = prefix;

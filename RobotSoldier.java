@@ -2,7 +2,6 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 public class RobotSoldier extends Actor
 {
-    
     static int grado = 0;
     private static final int OFFSET = 5;
     private double gas = 1000;
@@ -20,30 +19,33 @@ public class RobotSoldier extends Actor
         movement();
         sufferDamage();
         refuelRobot();
+        
     }
     
     public void movement(){
         int x = getX();
         int y = getY();
-        boolean isMoving = false;
+        boolean isMoving = true;
         
         setRotation(grado);
         
         
-        if(Greenfoot.isKeyDown("space") && isMoving == false){
+        if(Greenfoot.isKeyDown("right")){
+            grado+=OFFSET;
+            isMoving = false;
+        }
+        else if(Greenfoot.isKeyDown("left")){
+            grado-=OFFSET;
+            isMoving = false;
+        }else if(Greenfoot.isKeyDown("space") && isMoving == false){
             isMoving = true;
         }else if(Greenfoot.isKeyDown("space")  && isMoving == true){
             isMoving = false;
-        }else if(Greenfoot.isKeyDown("right")&& isMoving == false){
-            grado+=OFFSET;
-        }
-        else if(Greenfoot.isKeyDown("left") && isMoving == false){
-            grado-=OFFSET;
         }
         
         if(isMoving){
             move(5);
-            getWorld().addObject(new Explosion(),x,y);
+            getWorld().addObject(new Laser(),x,y);
             gas--;
         }
     }
@@ -62,8 +64,12 @@ public class RobotSoldier extends Actor
     public void refuelRobot(){
         Crystal crystal = (Crystal)getOneIntersectingObject(Crystal.class);
         if(isTouching(Crystal.class) && gas <= 1000){
-            gas += 125;
+            gas += 200;
             getWorld().removeObject(crystal);
         }
+    }
+    
+    public double getHealth(){
+        return gas;
     }
 }

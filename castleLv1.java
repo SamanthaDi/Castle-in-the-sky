@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class CastleLv1 extends Castle
 {
@@ -7,13 +7,10 @@ public class CastleLv1 extends Castle
     
     public CastleLv1()
     {
+        this.health = 1000;
+
         setImage(castle);
         getImage().scale (getImage().getWidth()-60, getImage().getHeight()-60);
     }
     
-    public void act()
-    {
-        sufferDamage();
-    }
-     
 }

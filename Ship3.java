@@ -1,8 +1,8 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class Ship3 extends InvasiveShip
 {
-    private int size = 10;
+    private int size = 13;
     private GreenfootImage ship1 = new GreenfootImage("images/InvasiveShip3.png");
     
     public Ship3(int speed)
