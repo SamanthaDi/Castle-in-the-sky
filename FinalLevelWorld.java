@@ -23,7 +23,7 @@ public class FinalLevelWorld extends Level
         playSong();
         
         
-        addObject(scoreBoard, 100, 40);
+        addObject(scoreBoard, getWidth()-200, robotHP.getHeight()/2+10);
         addObject(robotHP, robotHP.getWidth()/2+10, robotHP.getHeight()/2+10);
         addObject(castleHP, getWidth()/2, getHeight()/2+90);
         addObject(castle, getWidth() / 2, getHeight()/2);

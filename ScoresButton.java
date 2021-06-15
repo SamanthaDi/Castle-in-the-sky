@@ -1,9 +1,10 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;  
 
 public class ScoresButton extends Button
 {
-    public ScoresButton() 
+    public ScoresButton(Observer ... observers) 
     {
+        super(observers);
         GreenfootImage playButton = new GreenfootImage(300, 80);
         Font adjustedFont = new Font("Castellar",true, false, 60);
         playButton.setColor(Color.WHITE);
@@ -16,4 +17,6 @@ public class ScoresButton extends Button
     {
         Greenfoot.setWorld(new ScoreWorld());
     }
+    
+    
 }

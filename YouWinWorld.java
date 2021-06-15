@@ -7,6 +7,8 @@ public class YouWinWorld extends Level
     public YouWinWorld()
     {
         setBackground(win);
+        selectSong("Win.mp3");
+        playSong();
         addObject(new ExitButton(), getWidth()-140, getHeight()-30);
     }
 }

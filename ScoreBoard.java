@@ -1,5 +1,4 @@
-
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+import greenfoot.*;
 import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -13,10 +12,10 @@ import javax.swing.JInternalFrame;
  */
 public class ScoreBoard extends Actor
 {
-    private int score = 0;
-    private ArrayList<Integer> highScoreList=new ArrayList<Integer>();
-    private String scoreString = "";
-    private String fileName = "Puntos.txt";
+    private static int score;
+    private static ArrayList<Integer> highScoreList=new ArrayList<Integer>();
+    private static String scoreString = "";
+    private static String fileName = "Puntos.txt";
     
     public ScoreBoard(){
         readHighScores();
@@ -24,6 +23,10 @@ public class ScoreBoard extends Actor
     
     public void addScore(int score){
         this.score += score;
+    }
+    
+    public void cleanScore(){
+        score = 0;
     }
     
     public int getScore(){
