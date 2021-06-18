@@ -2,5 +2,6 @@
 comment0.target=ScoreWorld
 comment1.params=
 comment1.target=ScoreWorld()
-comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ ScoreWorld.\r\n\ \r\n
-numComments=2
+comment2.params=
+comment2.target=void\ readHighScores()
+numComments=3
